@@ -7,7 +7,7 @@ local Window = Rayfield:CreateWindow({
    Icon = 0,
    LoadingTitle = "Xitey HUB LOADING",
    LoadingSubtitle = "coded by: xitey",
-   Theme = "Default", -- Tema Vermelho
+   Theme = "Red", -- Configurado para Vermelho
    ToggleUIKeybind = Enum.KeyCode.K,
 
    ConfigurationSaving = {
@@ -40,9 +40,21 @@ UniversalTab:CreateButton({
 -- =========================
 -- BLOX FRUITS TAB
 -- =========================
-local BloxTab = Window:CreateTab("Blox Fruits", "swords") -- Ícone de espadas
+local BloxTab = Window:CreateTab("Blox Fruits", "swords")
 
 BloxTab:CreateSection("Scripts de Farm & Status")
+
+-- NOVO: Redz Hub (Com Configurações)
+BloxTab:CreateButton({
+   Name = "Redz Hub (Remake)",
+   Callback = function()
+      local Settings = {
+         JoinTeam = "Pirates"; -- Pirates/Marines
+         Translator = true; -- true/false
+      }
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/PlockScripts/newredz/refs/heads/main/Remake-version.luau"))(Settings)
+   end,
+})
 
 -- 1: BlueX Hub
 BloxTab:CreateButton({
