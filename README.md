@@ -1,10 +1,7 @@
--- Carregar Rayfield
-local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
-
--- Janela Principal com o SEU ÍCONE e Tema Vermelho
+-- Janela Principal (Sem o ícone para testar)
 local Window = Rayfield:CreateWindow({
    Name = "Xitey HUB",
-   Icon = 113989457746610, -- Seu Asset ID adicionado aqui!
+   Icon = 0, -- Voltamos para 0 para destravar
    LoadingTitle = "CARREGANDO Xitey HUB",
    LoadingSubtitle = "criado por: xitey",
    Theme = {
