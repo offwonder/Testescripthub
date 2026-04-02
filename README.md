@@ -3,9 +3,9 @@ local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 
 -- Window
 local Window = Rayfield:CreateWindow({
-   Name = "QIN HUB",
+   Name = "Xitey HUB",
    Icon = 0,
-   LoadingTitle = "QIN HUB LOADING",
+   LoadingTitle = "Xitey HUB LOADING",
    LoadingSubtitle = "coded by: okita",
    Theme = "Ocean",
    ToggleUIKeybind = Enum.KeyCode.K,
