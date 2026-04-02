@@ -7,7 +7,7 @@ local Window = Rayfield:CreateWindow({
    Icon = 0,
    LoadingTitle = "Xitey HUB LOADING",
    LoadingSubtitle = "coded by: xitey",
-   Theme = "Ocean",
+   Theme = "Default", -- Tema Vermelho
    ToggleUIKeybind = Enum.KeyCode.K,
 
    ConfigurationSaving = {
@@ -24,46 +24,64 @@ local Window = Rayfield:CreateWindow({
 -- =========================
 local UniversalTab = Window:CreateTab("Universal", "globe")
 
-UniversalTab:CreateLabel("Universal Script")
-UniversalTab:CreateSection("Script universal buatan okita")
+UniversalTab:CreateSection("Scripts Universais")
 
--- =========================
--- TEDDY SCRIPT (BLOX FRUITS)
--- =========================
 UniversalTab:CreateButton({
    Name = "Teddy (Blox Fruits)",
    Callback = function()
-      Rayfield:Notify({
-         Title = "Xitey HUB",
-         Content = "Loading Teddy Script...",
-         Duration = 3
-      })
-
       task.spawn(function()
-         local success, err = pcall(function()
-            loadstring(game:HttpGet(
-               "https://pastebin.com/raw/dLkdFtJt"
-            ))()
+         pcall(function()
+            loadstring(game:HttpGet("https://pastebin.com/raw/dLkdFtJt"))()
          end)
-
-         if success then
-            Rayfield:Notify({
-               Title = "QIN HUB",
-               Content = "Teddy Script berhasil dimuat",
-               Duration = 4
-            })
-         else
-            Rayfield:Notify({
-               Title = "Error",
-               Content = "Teddy Script gagal dimuat",
-               Duration = 5
-            })
-            warn(err)
-         end
       end)
    end,
 })
 
 -- =========================
--- GAME TAB
+-- BLOX FRUITS TAB
 -- =========================
+local BloxTab = Window:CreateTab("Blox Fruits", "swords") -- Ícone de espadas
+
+BloxTab:CreateSection("Scripts de Farm & Status")
+
+-- 1: BlueX Hub
+BloxTab:CreateButton({
+   Name = "BlueX Hub",
+   Callback = function()
+      _G.AutoTranslate = true 
+      _G.SaveConfig = true
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))()
+   end,
+})
+
+-- 2: Quantum Onyx
+BloxTab:CreateButton({
+   Name = "Quantum Onyx",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()
+   end,
+})
+
+-- 3: OMG Hub
+BloxTab:CreateButton({
+   Name = "OMG Hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
+   end,
+})
+
+-- 4: Hoho Hub
+BloxTab:CreateButton({
+   Name = "Hoho Hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
+   end,
+})
+
+-- 5: Bear Hub
+BloxTab:CreateButton({
+   Name = "Bear Hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Huylovemy/Bearhudz/refs/heads/main/Bearhud.lua"))()
+   end,
+})
