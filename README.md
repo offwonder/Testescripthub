@@ -1,11 +1,13 @@
--- Janela Principal (Sem o ícone para testar)
+-- Carregar Rayfield
+local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+
+-- Janela Principal (Resetada para o padrão estável)
 local Window = Rayfield:CreateWindow({
    Name = "Xitey HUB",
-   Icon = 0, -- Voltamos para 0 para destravar
+   Icon = 0, -- Voltamos para 0 para destravar o carregamento
    LoadingTitle = "CARREGANDO Xitey HUB",
    LoadingSubtitle = "criado por: xitey",
-   Theme = "Default",
-   },
+   Theme = "Default", -- Tema padrão vermelho da biblioteca
    ToggleUIKeybind = Enum.KeyCode.K,
    ConfigurationSaving = {
       Enabled = true,
