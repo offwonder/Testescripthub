@@ -1,4 +1,4 @@
--- Load Rayfield
+-- Load XiteyShield
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 
 -- Window
@@ -6,14 +6,14 @@ local Window = Rayfield:CreateWindow({
    Name = "Xitey HUB",
    Icon = 0,
    LoadingTitle = "Xitey HUB LOADING",
-   LoadingSubtitle = "coded by: okita",
+   LoadingSubtitle = "coded by: xitey",
    Theme = "Ocean",
    ToggleUIKeybind = Enum.KeyCode.K,
 
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = "QIN",
-      FileName = "QIN Hub"
+      FolderName = "Xitey",
+      FileName = "Xitey Hub"
    },
 
    KeySystem = false
@@ -34,7 +34,7 @@ UniversalTab:CreateButton({
    Name = "Teddy (Blox Fruits)",
    Callback = function()
       Rayfield:Notify({
-         Title = "QIN HUB",
+         Title = "Xitey HUB",
          Content = "Loading Teddy Script...",
          Duration = 3
       })
